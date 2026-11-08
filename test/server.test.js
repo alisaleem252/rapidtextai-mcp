@@ -59,7 +59,7 @@ test('generate_article calls the API with bearer auth and returns markdown', asy
   const r = await s.rpc({ id: 1, method: 'tools/call', params: { name: 'generate_article', arguments: { topic: 'x', word_count: 800, tone: '' } } });
   assert.ok(!r.result.isError);
   assert.match(r.result.content[0].text, /# T[\s\S]*Body[\s\S]*## FAQ[\s\S]*## Sources/);
-  const hit = s.hits.find((h) => h.url.endsWith('/v2/article/generate'));
+  const hit = s.hits.find((h) => h.url.split('?')[0].endsWith('/v2/article/generate'));
   assert.equal(hit.auth, 'Bearer k1');
   assert.deepEqual({ ...hit.body, stream: undefined }, { topic: 'x', word_count: 800, stream: undefined });
   s.close();
