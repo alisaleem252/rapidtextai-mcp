@@ -1,0 +1,15 @@
+{
+  "name": "rapidtextai-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for RapidTextAI: lets Claude, Cursor and other MCP clients generate researched articles and run SEO tools (competitor gap, content refresh, fact check, originality).",
+  "type": "module",
+  "bin": { "rapidtextai-mcp": "bin/server.js" },
+  "scripts": { "start": "node bin/server.js", "test": "node --test test/*.test.js" },
+  "engines": { "node": ">=18" },
+  "keywords": ["mcp", "model-context-protocol", "mcp-server", "claude", "cursor", "ai-agents", "seo", "article-generator", "content-generation", "fact-checking", "rapidtextai", "nodejs"],
+  "repository": { "type": "git", "url": "git+https://github.com/alisaleem252/rapidtextai-mcp.git" },
+  "homepage": "https://github.com/alisaleem252/rapidtextai-mcp#readme",
+  "bugs": { "url": "https://github.com/alisaleem252/rapidtextai-mcp/issues" },
+  "files": ["bin", "src", "README.md"],
+  "dependencies": {}
+}
